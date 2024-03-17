@@ -71,7 +71,16 @@ void Student::print()
     cout << "You have " << tests.size() << " tests: " << endl;
     for (int i = 0; i < tests.size(); i++)
     {
-        cout << i << ": " << tests[i].getName() << endl;
+        cout << i << ": " << tests[i].getName() << " - ";
+        if (tests[i].isFinished())
+        {
+            cout << tests[i].getPercentage() << "%";
+        }
+        else
+        {
+            cout << "Remains " << tests[i].howManyQuestionsLeft() << " questions";
+        }
+        cout << endl;
     }
 }
 

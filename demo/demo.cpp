@@ -52,5 +52,10 @@ int main()
 
     student1.getTests()[1].print();
 
+    cout << endl
+         << endl;
+
+    student1.print();
+
     return 0;
 }

@@ -30,6 +30,7 @@ public:
     int getPercentage();
     int getMark();
     int questionsCount();
+    int howManyQuestionsLeft();
     bool isFinished();
     bool hasPassed();
 };
@@ -152,6 +153,11 @@ int Test::getMark()
 int Test::questionsCount()
 {
     return _questions.size();
+}
+
+int Test::howManyQuestionsLeft()
+{
+    return questionsCount() - _questionIdx;
 }
 
 bool Test::isFinished()

@@ -22,7 +22,6 @@ public:
     bool checkAnswer(int idx);
     int getCorrectIdx();
     categoryVariant getQuestionCategory();
-    int getQuestionOptionsCount();
     string getText();
     vector<string> getOptions();
 };
@@ -69,11 +68,6 @@ int Question::getCorrectIdx()
 categoryVariant Question::getQuestionCategory()
 {
     return category;
-}
-
-int Question::getQuestionOptionsCount()
-{
-    return options.size();
 }
 
 string Question::getText()
